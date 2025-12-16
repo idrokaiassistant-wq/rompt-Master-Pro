@@ -1,92 +1,92 @@
 # Prompt Master Pro
 
-Professional prompt engineering tool built with Next.js, TypeScript, and AI models.
+Professional prompt injenering vositasi - Next.js, TypeScript va AI modellar bilan qurilgan.
 
-## Features
+## Xususiyatlar
 
-- 🤖 Multiple AI model support (OpenRouter, Google Gemini)
-- 🌍 Multi-language support (UZ, EN, RU, TR)
-- �� Modern UI with Tailwind CSS
-- 📝 Prompt templates and history
-- ⚙️ Advanced settings (temperature, max tokens)
-- 🔒 Secure credential storage
+- 🤖 Ko'p AI model qo'llab-quvvatlash (OpenRouter, Google Gemini)
+- 🌍 Ko'p tilli qo'llab-quvvatlash (O'Z, EN, RU, TR)
+- 🎨 Zamonaviy UI Tailwind CSS bilan
+- 📝 Prompt shablonlari va tarix
+- ⚙️ Kengaytirilgan sozlamalar (harorat, maksimal tokenlar)
+- 🔒 Xavfsiz ma'lumotlar saqlash
 
-## Tech Stack
+## Texnologik Stack
 
 - **Framework**: Next.js 16
-- **Language**: TypeScript
+- **Til**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: Zustand
-- **UI Components**: Radix UI
-- **Internationalization**: next-intl
+- **UI Komponentlar**: Radix UI
+- **Xalqarolashtirish**: next-intl
 
-## Getting Started
+## Boshlash
 
-### Prerequisites
+### Talablar
 
 - Node.js 18+ 
-- pnpm (recommended) or npm
+- pnpm (tavsiya etiladi) yoki npm
 
-### Installation
+### O'rnatish
 
-1. Clone the repository:
+1. Repository'ni klonlang:
 ```bash
-git clone <repository-url>
+git clone https://github.com/idrokaiassistant-wq/rompt-Master-Pro.git
 cd Prompt_Master_pro
 ```
 
-2. Install dependencies:
+2. Bog'liqliklarni o'rnating:
 ```bash
 pnpm install
 ```
 
-3. Set up environment variables:
+3. Environment o'zgaruvchilarini sozlang:
 ```bash
 cp .env.example .env.local
 ```
 
-Edit `.env.local` and add your API keys:
-- `OPENROUTER_API_KEY` - Get from [OpenRouter](https://openrouter.ai/)
-- `GOOGLE_GEMINI_API_KEY` - Get from [Google AI Studio](https://makersuite.google.com/app/apikey)
-- `PMPRO_CREDENTIALS_SECRET` - Generate with: `openssl rand -base64 32`
+`.env.local` faylini tahrirlang va API kalitlaringizni qo'shing:
+- `OPENROUTER_API_KEY` - [OpenRouter](https://openrouter.ai/) dan oling
+- `GOOGLE_GEMINI_API_KEY` - [Google AI Studio](https://makersuite.google.com/app/apikey) dan oling
+- `PMPRO_CREDENTIALS_SECRET` - Quyidagi buyruq bilan yarating: `openssl rand -base64 32`
 
-4. Run the development server:
+4. Development server'ni ishga tushiring:
 ```bash
 pnpm dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Brauzeringizda [http://localhost:3000](http://localhost:3000) ni oching.
 
-## Scripts
+## Skriptlar
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm typecheck` - Run TypeScript type checking
-- `pnpm test` - Run tests
-- `pnpm test:coverage` - Run tests with coverage
+- `pnpm dev` - Development server'ni ishga tushirish
+- `pnpm build` - Production uchun build qilish
+- `pnpm start` - Production server'ni ishga tushirish
+- `pnpm lint` - ESLint ishga tushirish
+- `pnpm typecheck` - TypeScript type tekshiruvi
+- `pnpm test` - Testlarni ishga tushirish
+- `pnpm test:coverage` - Coverage bilan testlarni ishga tushirish
 
-## Environment Variables
+## Environment O'zgaruvchilar
 
-See `.env.example` for all available environment variables.
+Barcha mavjud environment o'zgaruvchilar uchun `.env.example` faylini ko'ring.
 
 ## Deployment
 
 ### Railway
 
-1. Connect your GitHub repository to Railway
-2. Add environment variables in Railway dashboard
-3. Railway will automatically deploy on push
+1. GitHub repository'ni Railway'ga ulang
+2. Railway dashboard'da environment o'zgaruvchilarni qo'shing
+3. Railway avtomatik ravishda push bo'lganda deploy qiladi
 
-### Other Platforms
+### Boshqa Platformalar
 
-The app can be deployed to any platform that supports Next.js:
+Dastur Next.js'ni qo'llab-quvvatlaydigan har qanday platformaga deploy qilinishi mumkin:
 - Vercel
 - Netlify
 - AWS
 - DigitalOcean
 
-## License
+## Litsenziya
 
-Private - All rights reserved
+Xususiy - Barcha huquqlar himoya qilingan
