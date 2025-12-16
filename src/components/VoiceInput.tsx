@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePromptStore } from '@/store/promptStore';
 import { Button } from '@/components/ui/button';
-import { Mic, MicOff } from 'lucide-react';
+import { Mic } from 'lucide-react';
 import { toast } from 'sonner';
 
 export function VoiceInput({ onListeningChange }: { onListeningChange?: (isListening: boolean) => void }) {
@@ -15,7 +15,9 @@ export function VoiceInput({ onListeningChange }: { onListeningChange?: (isListe
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition = 
+      (window as any).SpeechRecognition || 
+      (window as any).webkitSpeechRecognition;
     if (SpeechRecognition) {
       setIsSupported(true);
       const recognition = new SpeechRecognition();
@@ -33,7 +35,7 @@ export function VoiceInput({ onListeningChange }: { onListeningChange?: (isListe
         onListeningChange?.(false);
       };
 
-      recognition.onresult = (event) => {
+      recognition.onresult = (event: SpeechRecognitionEvent) => {
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           finalTranscript += event.results[i][0].transcript;
@@ -41,7 +43,7 @@ export function VoiceInput({ onListeningChange }: { onListeningChange?: (isListe
         setInput(finalTranscript);
       };
 
-      recognition.onerror = (event) => {
+      recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
         toast.error(`${t('error')}: ${event.error}`);
       };
 
